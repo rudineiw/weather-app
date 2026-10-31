@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previsão do Tempo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⛅ Previsão do Tempo</h1>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Buscar cidade (ex.: Teutônia)..."
+             autocomplete="off" aria-label="Buscar cidade">
+      <button id="btn-location" type="button">📍 Usar minha localização</button>
+      <ul id="suggestions" class="hidden" role="listbox"></ul>
+    </div>
+  </header>
+
+  <main>
+    <div id="loading" class="hidden">Carregando...</div>
+    <div id="error" class="hidden" role="alert"></div>
+
+    <section id="current" class="hidden">
+      <h2 id="city-name"></h2>
+      <div class="current-grid">
+        <div class="temp-box">
+          <span id="icon" class="big-icon"></span>
+          <span id="temp" class="big-temp"></span>
+          <span id="condition"></span>
+        </div>
+        <div class="metrics">
+          <div>🌡️ Sensação: <span id="feels"></span></div>
+          <div>💧 Umidade: <span id="humidity"></span></div>
+          <div>💨 Vento: <span id="wind"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="forecast" class="hidden">
+      <nav class="tabs" role="tablist">
+        <button id="tab-hourly" class="active" type="button">Hora a Hora</button>
+        <button id="tab-daily" type="button">15 Dias</button>
+      </nav>
+      <div id="hourly" class="panel scroll-x"></div>
+      <div id="daily" class="panel hidden"></div>
+    </section>
+  </main>
+
+  <footer>Dados: Open-Meteo (gratuito, sem chave)</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
