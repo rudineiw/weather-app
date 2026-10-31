@@ -2,6 +2,8 @@
 
 Aplicação web simples e responsiva para consultar as condições meteorológicas atuais e a previsão do tempo por cidade ou pela localização do dispositivo. A interface está em português e consome os serviços gratuitos da [Open-Meteo](https://open-meteo.com/), sem necessidade de chave de API.
 
+**Teste online:** [rudineiw.github.io/weather-app](https://rudineiw.github.io/weather-app/)
+
 ## Funcionalidades
 
 - Busca de cidades com sugestões de localização enquanto você digita.
